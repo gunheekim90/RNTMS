@@ -29,8 +29,10 @@ module.exports = {
 }
 </code>
 
-5. run: react-native start
+5. npm install @types/react @types/react-native @types/react-redux --save-dev
 
-6. run: react-native run-android
+6. run: react-native start
 
-7. Then, You can run typescript file without build
+7. run: react-native run-android
+
+8. Then, You can run typescript file without build
