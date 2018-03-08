@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import Title from './components/Title'
 
-const instructions = Platform.select({
+const instructions: string = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
   android: 'Double tap R on your keyboard to reload,\n' +
@@ -23,14 +23,15 @@ interface Props {};
 interface State {};
 export default class App extends Component<Props,State> {
   render() {
+    let testProps = "이거구나";
     return (
       <View style={styles.container}>
-        <Title title="진짜되네?"/>
+        <Title title={testProps}/>
         <Text style={styles.welcome}>
           Welcome to React Native 
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js
+          React Native + TypeScript + MobX + Navigation
         </Text>
         <Text style={styles.instructions}>
           {instructions}

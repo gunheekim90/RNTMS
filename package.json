@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "android": "react-native run-android"
   },
   "dependencies": {
-    "@types/react": "^16.0.40",
-    "@types/react-native": "^0.52.16",
-    "@types/react-redux": "^5.0.15",
+    "native-base": "^2.3.9",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0"
   },
