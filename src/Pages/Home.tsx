@@ -10,8 +10,8 @@ import {
   Text,
   View
 } from 'react-native';
-import Title from './components/Title'
-import Footer from './components/Footer'
+import Title from '../components/Title'
+import Footer from '../components/Footer'
 import { Container, Header, Content, FooterTab, Button, Icon } from 'native-base';
 const instructions: string = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -23,11 +23,21 @@ const instructions: string = Platform.select({
 interface Props {};
 interface State {};
 export default class App extends Component<Props,State> {
+    static navigationOptions = {
+        headerTitle: 'WNH',
+        headerRight: (
+          <Button
+            onPress={() => alert('This is a button!')}
+            title="Info"
+            color="#fff"
+          />
+        ),
+      };
   render() {
     let testProps = "이거구나";
     return (
       <Container>
-        <Header />
+   
         <Content>
         <Title title={testProps}/>
         <Text>
@@ -40,7 +50,7 @@ export default class App extends Component<Props,State> {
           {instructions}
         </Text>
        </Content>
-        <Footer/>
+        <Footer navigator={this.props.navigation}/>
       </Container>
     );
   }

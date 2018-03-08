@@ -1,3 +1,21 @@
+This project has...
+
+1. Typescript
+2. Mobx
+3. storybook
+4. NativeBase.io
+
+
+
+
+
+
+<hr/>
+
+How to compose
+
+
+
 1. Introduce Typescript, Ref: http://blog.novanet.no/easy-typescript-with-react-native/
 
 2. yarn add --dev react-native-typescript-transformer typescript  
