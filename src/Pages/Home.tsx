@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 import Title from '../components/Title'
 import Footer from '../components/Footer'
+import Fabs from '../components/Fabs'
 import { Container, Header, Content, FooterTab, Button, Icon } from 'native-base';
 const instructions: string = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -51,11 +52,14 @@ export default class App extends Component<Props,State> {
         </Text>
        </Content>
         <Footer navigator={this.props.navigation}/>
+        {/* <Fabs/> */}
       </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
-
+    ContainerStyle : {
+      
+    }
 });
