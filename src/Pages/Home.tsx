@@ -14,6 +14,9 @@ import Title from '../components/Title'
 import Footer from '../components/Footer'
 import Fabs from '../components/Fabs'
 import { Container, Header, Content, FooterTab, Button, Icon } from 'native-base';
+import { observer, inject } from "mobx-react";
+
+
 const instructions: string = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -23,6 +26,10 @@ const instructions: string = Platform.select({
 
 interface Props {};
 interface State {};
+
+
+@inject("counterStore")
+@observer
 export default class App extends Component<Props,State> {
     static navigationOptions = {
         headerTitle: 'WNH',
@@ -42,7 +49,7 @@ export default class App extends Component<Props,State> {
         <Content>
         <Title title={testProps}/>
         <Text>
-          Welcome to React Native 
+          Welcome to React Native  {this.props.counterStore.count}
         </Text>
         <Text>
           React Native + TypeScript + MobX + Navigation
@@ -50,7 +57,12 @@ export default class App extends Component<Props,State> {
         <Text>
           {instructions}
         </Text>
+        <View style={{flex: 1, flexDirection: 'row'}}>
+            <Button style={styles.button1} title="Increment Counter" onPress={() => this.props.counterStore.increment()}/>
+            <Button style={styles.button2} title="Decrement Counter" onPress={() => this.props.counterStore.decrement()}/>
+        </View>
        </Content>
+      
         <Footer navigator={this.props.navigation}/>
         {/* <Fabs/> */}
       </Container>
@@ -61,5 +73,17 @@ export default class App extends Component<Props,State> {
 const styles = StyleSheet.create({
     ContainerStyle : {
       
+    },
+    button1 : {
+        flex: 1,
+        backgroundColor : 'red',
+        height : 100,
+        width : 100
+    },
+    button2 : {
+        flex: 1,
+        backgroundColor : 'black',
+        height : 100,
+        width : 100
     }
 });

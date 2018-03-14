@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "842761608227",
+    "firebase_url": "https://passpass-e2e87.firebaseio.com",
+    "project_id": "passpass-e2e87",
+    "storage_bucket": "passpass-e2e87.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842761608227:android:ef6f8720d0a0c243",
+        "android_client_info": {
+          "package_name": "com.hotelprodapp09"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842761608227-fvqtqud562q4k8i2ri8mr96e0s0hikr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBodOeArKHEWRlCmSlBkP7hnHm-FFC9R7I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
